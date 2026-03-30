@@ -12,6 +12,7 @@ body {
   background: var(--bg, #faf9f7);
   color: var(--text, #111111);
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 /* Responsive container used by pages */
