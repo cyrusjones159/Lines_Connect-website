@@ -5,18 +5,19 @@
 
 .about-container {
     min-height: calc(100vh - 172px);
-    background-color: #1f5f3a;
+    background-color: #123121;
     background-image:
         linear-gradient(
             100deg,
-            rgba(18, 49, 33, 0.78) 0%,
-            rgba(22, 78, 48, 0.62) 38%,
-            rgba(31, 95, 58, 0.42) 58%,
-            rgba(31, 95, 58, 0.22) 100%
+            rgba(18, 49, 33, 0.58) 0%,
+            rgba(22, 78, 48, 0.4) 34%,
+            rgba(31, 95, 58, 0.22) 58%,
+            rgba(31, 95, 58, 0.08) 76%,
+            rgba(31, 95, 58, 0) 100%
         ),
         url('../../images/portfolio_imgs/portfolio_images/green_smoke.png');
-    background-size: cover;
-    background-position: center right;
+    background-size: 100% 100%, cover;
+    background-position: left top, center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
@@ -121,12 +122,13 @@
         background-image:
             linear-gradient(
                 180deg,
-                rgba(18, 49, 33, 0.82) 0%,
-                rgba(22, 78, 48, 0.62) 100%
+                rgba(18, 49, 33, 0.56) 0%,
+                rgba(22, 78, 48, 0.32) 58%,
+                rgba(22, 78, 48, 0.14) 100%
             ),
             url('../../images/portfolio_imgs/portfolio_images/green_smoke.png');
-        background-position: center;
-        background-size: cover;
+        background-position: left top, center;
+        background-size: 100% 100%, cover;
     }
 
     .about-hero {
