@@ -98,8 +98,8 @@
 }
 
 .social-icon-small {
-    width: 30px;
     height: 30px;
+    width: auto;
 }
 
 @media (max-width: 900px) {
