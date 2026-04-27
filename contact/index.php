@@ -76,7 +76,7 @@
             <!-- Section 3: Contact Form -->
             <section class="contact-form-section">
                 <h2>Send Me a Message</h2>
-                <form id="contactForm" class="contact-form" action="/submit-contact" method="POST" novalidate>
+                <form id="contactForm" class="contact-form" method="POST" novalidate>
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
