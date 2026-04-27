@@ -49,8 +49,15 @@
 	object-fit: cover;
 	object-position: center;
 	border-radius: 5px;
+	cursor: zoom-in;
 	filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
 	transition: transform 0.2s, filter 0.2s;
+}
+
+.grid-item:focus-visible {
+	outline: 3px solid #fff;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 5px rgba(17,17,17,0.8);
 }
 
 @media (max-width: 1000px) {
@@ -145,3 +152,49 @@
 }
 
 /* Customize spans above to adjust puzzle layout! */
+
+.portfolio-lightbox {
+	position: fixed;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	padding: clamp(1rem, 2.2vw, 2rem);
+	background: rgba(0, 0, 0, 0.86);
+	z-index: 9999;
+}
+
+.portfolio-lightbox.is-open {
+	display: flex;
+}
+
+.portfolio-lightbox-image {
+	max-width: min(96vw, 1800px);
+	max-height: 90vh;
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 14px 48px rgba(0, 0, 0, 0.45);
+	object-fit: contain;
+	background: #111;
+}
+
+.portfolio-lightbox-close {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	border: 2px solid #fff;
+	background: rgba(0, 0, 0, 0.45);
+	color: #fff;
+	padding: 0.35rem 0.6rem;
+	font-weight: 700;
+	font-size: 1rem;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.portfolio-lightbox-close:hover,
+.portfolio-lightbox-close:focus-visible {
+	background: #fff;
+	color: #111;
+}
