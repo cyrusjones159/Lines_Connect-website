@@ -55,10 +55,6 @@
 	filter: drop-shadow(0 4px 16px rgba(0,0,0,0.16));
 }
 
-.grid-item.is-hidden {
-	display: none;
-}
-
 /* Puzzle-piece layout with varying sizes - 4 columns base */
 .item1  { grid-column: span 2; grid-row: span 2; }
 .item2  { grid-column: span 1; grid-row: span 1; }
@@ -83,38 +79,3 @@
 .item21 { grid-column: span 1; grid-row: span 1; }
 
 /* Customize spans above to adjust puzzle layout! */
-
-.portfolio-load-controls {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.75rem;
-	padding: 1.5rem 0 2rem;
-}
-
-.load-more-btn {
-	min-height: 44px;
-	padding: 0.7rem 1.1rem;
-	border: 2px solid #111;
-	border-radius: 8px;
-	background: #fff;
-	color: #111;
-	font-weight: 700;
-	cursor: pointer;
-}
-
-.load-more-btn:hover,
-.load-more-btn:focus-visible {
-	background: #111;
-	color: #fff;
-}
-
-.load-more-btn.is-hidden,
-.portfolio-sentinel.is-hidden {
-	display: none;
-}
-
-.portfolio-sentinel {
-	width: 100%;
-	height: 1px;
-}
