@@ -15,7 +15,8 @@
     --gap-lg: 2.25rem;
     --gap-md: 1.25rem;
     --gap-sm: 0.75rem;
-	--container-max:1100px;
+    --container-max:1100px;
+    --row-max-height:
 }    
 
 /* Center the breadcrumb navigation */
@@ -32,21 +33,18 @@
 }
 
 .portfolio-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: stretch;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: clamp(160px, 22vw, 320px);
 	gap: 8px;
 	max-width: 95%;
 	margin: 0 auto 0.5rem;
 }
 
 .grid-item {
-	flex: 1 1 clamp(190px, 23vw, 280px);
-	aspect-ratio: 4 / 3;
-	width: auto;
-	height: auto;
-	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 	object-position: center;
 	border-radius: 5px;
 	filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
@@ -55,12 +53,8 @@
 
 @media (max-width: 1000px) {
 	.portfolio-grid {
-		max-width: 97%;
-		gap: 7px;
-	}
-
-	.grid-item {
-		flex-basis: clamp(180px, 30vw, 260px);
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: clamp(150px, 28vw, 260px);
 	}
 }
 
@@ -70,14 +64,10 @@
 	}
 
 	.portfolio-grid {
-		justify-content: stretch;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: clamp(140px, 45vw, 240px);
 		gap: 7px;
 		max-width: 98%;
-	}
-
-	.grid-item {
-		flex-basis: calc(50% - 4px);
-		aspect-ratio: 1 / 1;
 	}
 }
 
@@ -86,60 +76,27 @@
 	filter: drop-shadow(0 4px 16px rgba(0,0,0,0.16));
 }
 
-/* Puzzle-piece layout with varying widths/heights using flex */
-.item1,
-.item11,
-.item16,
-.item21 {
-	flex-basis: clamp(320px, 42vw, 520px);
-	aspect-ratio: 5 / 3;
-}
+/* Puzzle-piece layout with varying sizes - 4 columns base */
+.item1  { grid-column: span 2; grid-row: span 2; }
+.item2  { grid-column: span 1; grid-row: span 1; }
+.item3  { grid-column: span 1; grid-row: span 2; }
+.item4  { grid-column: span 2; grid-row: span 1; }
+.item5  { grid-column: span 1; grid-row: span 1; }
+.item6  { grid-column: span 1; grid-row: span 2; }
+.item7  { grid-column: span 2; grid-row: span 1; }
+.item8  { grid-column: span 1; grid-row: span 1; }
+.item9  { grid-column: span 1; grid-row: span 1; }
+.item10 { grid-column: span 1; grid-row: span 2; }
+.item11 { grid-column: span 2; grid-row: span 2; }
+.item12 { grid-column: span 1; grid-row: span 1; }
+.item13 { grid-column: span 2; grid-row: span 1; }
+.item14 { grid-column: span 1; grid-row: span 2; }
+.item15 { grid-column: span 1; grid-row: span 1; }
+.item16 { grid-column: span 2; grid-row: span 2; }
+.item17 { grid-column: span 1; grid-row: span 1; }
+.item18 { grid-column: span 1; grid-row: span 1; }
+.item19 { grid-column: span 1; grid-row: span 2; }
+.item20 { grid-column: span 2; grid-row: span 1; }
+.item21 { grid-column: span 1; grid-row: span 1; }
 
-.item7,
-.item13,
-.item20 {
-	flex-basis: clamp(300px, 36vw, 460px);
-	aspect-ratio: 16 / 10;
-}
-
-.item3,
-.item6,
-.item10,
-.item14,
-.item19 {
-	flex-basis: clamp(220px, 26vw, 320px);
-	aspect-ratio: 3 / 4;
-}
-
-@media (max-width: 1000px) {
-	.item1,
-	.item11,
-	.item16,
-	.item21,
-	.item7,
-	.item13,
-	.item20 {
-		flex-basis: clamp(260px, 48vw, 420px);
-	}
-
-	.item3,
-	.item6,
-	.item10,
-	.item14,
-	.item19 {
-		flex-basis: clamp(190px, 33vw, 280px);
-	}
-}
-
-@media (max-width: 700px) {
-	.item1,
-	.item11,
-	.item16,
-	.item21,
-	.item7,
-	.item13,
-	.item20 {
-		flex-basis: 100%;
-		aspect-ratio: 16 / 10;
-	}
-}
+/* Customize spans above to adjust puzzle layout! */
